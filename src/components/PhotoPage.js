@@ -6,7 +6,7 @@ import axios from 'axios';
     const [photo, setPhoto] = useState([]);
 
     useEffect(() => {
-        axios.get("https://api.nasa.gov/planetary/apod?f99FqFapxKgObJJoh7oJ6klaCAdecegMpTaBdItk")
+        axios.get("https://api.nasa.gov/planetary/apod?api_key=f99FqFapxKgObJJoh7oJ6klaCAdecegMpTaBdItk")
           .then(response => {
             console.log(response.data);
             setPhoto(response.data);
