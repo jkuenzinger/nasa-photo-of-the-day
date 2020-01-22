@@ -4,7 +4,7 @@ const PhotoCard = props => {
         <div>
             <h3>Date: {props.date}</h3>
             <p> Description: {props.explanation}</p>
-            <img src={props.hdurl} alt=""/>
+            <img src={props.url} alt=""/>
         </div>
     );
 };
