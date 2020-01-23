@@ -20,6 +20,7 @@ import axios from 'axios';
               
             <PhotoCard
                   key={photo.date}
+                  title={photo.title}
                   date={photo.date}
                   explanation={photo.explanation}
                    url={photo.url}
