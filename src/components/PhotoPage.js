@@ -1,6 +1,24 @@
 import React, {useState, useEffect} from "react";
 import PhotoCard from "./PhotoCard";
 import axios from 'axios';
+import styled from "styled-components";
+import HeaderItem from "./HeaderItem";
+
+
+const PhotoContainer = styled.div`
+display:flex;
+width:50%;
+height: 300px;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+margin-left:25%;
+
+
+`;
+
+
+
 
  function PhotoPage(){
     const [photo, setPhoto] = useState([]);
@@ -16,9 +34,9 @@ import axios from 'axios';
      });
        }, []);
       return (
-          <div>
-              
-            <PhotoCard
+        <PhotoContainer>
+          <HeaderItem/>
+         <PhotoCard
                   key={photo.date}
                   title={photo.title}
                   date={photo.date}
@@ -26,8 +44,8 @@ import axios from 'axios';
                    url={photo.url}
                    photo={photo}
                   />
-           
-          </div>
+         </PhotoContainer>
+       
       );
 }
 
