@@ -17,13 +17,15 @@ import axios from 'axios';
        }, []);
       return (
           <div>
-              <PhotoCard
+              
+            <PhotoCard
                   key={photo.date}
                   date={photo.date}
-                  description={photo.explanation}
-                  photo={photo.url}
+                  explanation={photo.explanation}
+                   url={photo.url}
+                   photo={photo}
                   />
-              
+           
           </div>
       );
 }
